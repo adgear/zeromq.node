@@ -15,9 +15,9 @@ zmq.version.should.match(/^\d+\.\d+\.\d+$/);
 
 // socket opts
 
-['HWM', 'SWAP', 'AFFINITY', 'IDENTITY',
+['AFFINITY', 'IDENTITY',
  'SUBSCRIBE', 'UNSUBSCRIBE', 'RATE',
- 'RECOVERY_IVL', 'RECOVERY_IVL', 'MCAST_LOOP',
+ 'RECOVERY_IVL', 'RECOVERY_IVL',
  'SNDBUF', 'RCVBUF', 'RCVMORE', 'SNDMORE', 'FD', 'EVENTS',
  'TYPE', 'LINGER', 'RECONNECT_IVL', 'BACKLOG'].forEach(function(prop){
   zmq['ZMQ_' + prop].should.be.a('number');
